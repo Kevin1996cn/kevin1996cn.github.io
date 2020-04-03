@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="C&#43;&#43;刷题相关知识点"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@kevin1996cn"/>
+
+
+
+  	<meta property="og:title" content="C&#43;&#43;刷题相关知识点 &middot; I am thinking ..." />
+  	<meta property="og:site_name" content="I am thinking ..." />
+  	<meta property="og:url" content="https://kevin1996cn.github.io/2020/04/03/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" />
+
+    
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-04-03T17:32:16&#43;08:00" />
+
+    
+    
+
+    <title>C&#43;&#43;刷题相关知识点 &middot; I am thinking ...</title>
+
+    
+    <meta name="description" content="2.vector vector&amp;amp; A的意思是:名字叫A的里面全是int类型的数组 for（auto item:A）就是把A中所有的都遍历一遍
+A.begin() 和 A.end()获取首尾，可以用sort（A.begin（），A.end（））来排序
+unique函数功能是去除相邻的重复元素，注意是相邻，所以必须" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://kevin1996cn.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://kevin1996cn.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://kevin1996cn.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://kevin1996cn.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-dark.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://kevin1996cn.github.io/index.xml" rel="alternate" type="application/rss+xml" title="I am thinking ..." />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.65.3" />
+
+    <link rel="canonical" href="https://kevin1996cn.github.io/2020/04/03/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null ,
+        "logo": "https://kevin1996cn.github.io/images/home.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://kevin1996cn.github.io/images/home.png",
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": "xiaochanchan.cn",
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": "Every man dies, not every man really lives."
+        
+    },
+    "headline": "C++刷题相关知识点",
+    "name": "C++刷题相关知识点",
+    "wordCount":  228 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://kevin1996cn.github.io/2020/04/03/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/",
+    "datePublished": "2020-04-03T17:32Z",
+    "dateModified": "2020-04-03T17:32Z",
+    
+    
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kevin1996cn.github.io/2020/04/03/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/">Home</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/machine-learning">Machine Learning</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/others">Others</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/about">About</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://kevin1996cn.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="https://kevin1996cn.github.io/"><img src="https://kevin1996cn.github.io/images/home.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">C&#43;&#43;刷题相关知识点</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            Apr 3, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>2.vector
+vector<!-- raw HTML omitted -->&amp; A的意思是:名字叫A的里面全是int类型的数组
+for（auto item:A）就是把A中所有的都遍历一遍</p>
+<p>A.begin() 和 A.end()获取首尾，可以用sort（A.begin（），A.end（））来排序</p>
+<p>unique函数功能是去除相邻的重复元素，注意是相邻，所以必须先使用sort函数。还有一个容易忽视的特性是它并不真正把重复的元素删除。之所以说比不真正把重复的元素删除，
+因为unique实际上并没有删除任何元素，而是将无重复的元素复制到序列的前段，从而覆盖相邻的重复元素。unique返回的迭代器指向超出无重复的元素范围末端的下一个位置。</p>
+<p>A.begin() A.end() A.front() A.back() 前两个是起始和末尾元素的值，后两个是返回的引用。</p>
+<p>3.递归要想好，比如求二叉树最大高度。如果树为空就返回0，否则返回左子树或右子树两者最大值+1</p>
+<p>4.不用中间变量的交换，A=A+B;B=A-B;A=A-B; 第二步的A已经是A+B了。</p>
+<p>5.map&lt;char,int&gt; dict; dict[&lsquo;I&rsquo;]=1; dict[&lsquo;V&rsquo;]=5;</p>
+<p>6.求一个数的回文数，除10取余之后，用变量接收，然后每次把这个变量乘10加上新的取余的数，就得到反转的了；</p>
+<p>7.关于Int32位反转之后溢出的问题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">if</span>(res<span style="color:#f92672">&gt;</span>INT_MAX<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span><span style="color:#f92672">||</span>(res<span style="color:#f92672">==</span>INT_MAX<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span><span style="color:#f92672">&amp;&amp;</span>t<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span>)) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">if</span>(res<span style="color:#f92672">&lt;</span>INT_MIN<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span><span style="color:#f92672">||</span>(res<span style="color:#f92672">==</span>INT_MIN<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span><span style="color:#f92672">&amp;&amp;</span>t<span style="color:#f92672">&lt;-</span><span style="color:#ae81ff">8</span>)) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#ae81ff">2</span><span style="color:#f92672">^</span><span style="color:#ae81ff">31</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2147483647</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">^</span><span style="color:#ae81ff">31</span><span style="color:#f92672">=-</span><span style="color:#ae81ff">2147483648</span>
+</code></pre></div><p>第七题：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">int</span> reverse(<span style="color:#66d9ef">int</span> x) {
+        <span style="color:#66d9ef">int</span> res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">while</span>(x<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>)
+        {
+                <span style="color:#66d9ef">int</span> t<span style="color:#f92672">=</span>x<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>;
+                x<span style="color:#f92672">=</span>x<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>;
+                <span style="color:#66d9ef">if</span> (res <span style="color:#f92672">&gt;</span> INT_MAX <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">||</span> res <span style="color:#f92672">&lt;</span> INT_MIN <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>) <span style="color:#75715e">//这句可以抵上边两句
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+                res<span style="color:#f92672">=</span>res<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span><span style="color:#f92672">+</span>t;
+
+        }
+        <span style="color:#66d9ef">return</span> res;
+    }
+};
+</code></pre></div><p>官方给出的溢出判断是因为MAX_VALUE : 2147483647 MIN_VALUE : -2147483648 他要判断最后一位不要大于 7 和 不要小于-8.</p>
+<p>其实完全没必要验证大于7小于八。首位是7的时候最后一次数才是7，然而int类型最大的数首位是2。</p>
+<p>因为你传递的参数，是不能保存首位大于7的数。</p>
+<p>int类型的范围是 -2^31——2^31-1，即-2147483648——2147483647，代码中的if中有(rev == INT_MAX / 10 &amp;&amp; pop &gt; 7)和(rev == INT_MIN / 10 &amp;&amp; pop &lt; -8)判断，看似完全顾及到各种情况，但是仔细一想，会发现根本就不会有符合这个条件的32位int数值，假如符合，也应该是int范围最大值反转过来，然后最高位大于7，首先int范围最大值反转过来就没法当作int数值传递到这个方法的形参中，在编译期就会报错：Integer number too large，所以如果方法的形参不是int类型的话，可以加上这些判断，但是如果方法的形参是int的话，完全不用考虑这些判断，因为在传递这个值的时候，编译期就报错了</p>
+<p>8.关于位运算求子集那道题，i从0到2，1&laquo;i对应 001，010，100，正好是给的三个位置对应的表示，那么j从0-7，即000，001，010，011&hellip;正好就是三个位置的组合，
+两者相与就把单个的都找到了。然后push_back到vector中即可。</p>
+<ol start="9">
+<li>
+<p>无序map很好用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m;
+   
+m.find(x)<span style="color:#f92672">!=</span>m.end()
+   
+m[z]<span style="color:#f92672">=</span><span style="color:#ae81ff">99</span>;
+</code></pre></div><p>使用count，返回的是被查找元素的个数。如果有，返回1；否则，返回0。注意，map中不存在相同元素，所以返回值只能是1或0。</p>
+<p>使用find，返回的是被查找元素的位置，没有则返回map.end()。</p>
+</li>
+<li></li>
+<li>
+<p>素数：厄拉多塞筛法  （用来求大量的素数）</p>
+<p>具体操作：先将 2~n 的各个数放入表中，然后在2的上面画一个圆圈，然后划去2的其他倍数；第一个既未画圈又没有被划去的数是3，将它画圈，再划去3的其他倍数；现在既未画圈又没有被划去的第一个数 是5，将它画圈，并划去5的其他倍数……依次类推，一直到所有小于或等于 n 的各数都画了圈或划去为止。这时，表中画了圈的以及未划去的那些数正好就是小于 n 的素数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> num(n,true);
+<span style="color:#66d9ef">int</span> res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;i<span style="color:#f92672">&lt;=</span>sqrt(n);i<span style="color:#f92672">++</span>)
+{
+    <span style="color:#66d9ef">if</span>(num[i])
+    {
+         <span style="color:#66d9ef">int</span> k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+         <span style="color:#66d9ef">while</span>(k<span style="color:#f92672">*</span>i<span style="color:#f92672">&lt;</span>n)
+         {
+             num[k<span style="color:#f92672">*</span>i]<span style="color:#f92672">=</span>false;
+             k<span style="color:#f92672">++</span>;
+         }
+    }
+}
+</code></pre></div></li>
+<li>
+<p>构造二维的vector需要先构造一维的</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> temp(rows,<span style="color:#ae81ff">0</span>);
+vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> res(cols,temp);
+</code></pre></div><ol start="14">
+<li>
+<p>全排列的写法 949题
+调用next_permutation求全排列的时候必须先给容器排序。还有一个反向的叫prev_permutation</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">sort(A.begin(),A.end());  
+<span style="color:#66d9ef">do</span>
+{
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i:A)
+    cout<span style="color:#f92672">&lt;&lt;</span>i;
+    cout<span style="color:#f92672">&lt;&lt;</span>endl;
+} <span style="color:#66d9ef">while</span>(next_permutation(A.begin(),A.end()));
+</code></pre></div></li>
+</ol>
+<p>输入 [1,2,3,4]
+输出了全排列</p>
+<ol start="15">
+<li>
+<p>全排列第46题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> permute(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+    vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> result;
+        sort(nums.begin(), nums.end());
+        result.push_back(nums);
+        <span style="color:#66d9ef">while</span> (next_permutation(nums.begin(), nums.end()))
+        {
+            result.push_back(nums);
+        }
+        <span style="color:#66d9ef">return</span> result;<span style="color:#960050;background-color:#1e0010">。</span>
+};
+</code></pre></div></li>
+<li>
+<p>c++编译报warning: control reaches end of non-void function</p>
+</li>
+<li>
+<p>报错的位置不一定是真的出错了。这个说的是有的地方没有返回值，把每个分支都返回值就ok</p>
+</li>
+<li>
+<p>multimap是可以保存重复元素的map，可以将其简写成mmp.  &gt;_&lt;</p>
+</li>
+<li>
+<p>十分好用的二分模版</p>
+<p>取中位数索引的代码:<strong>使用“左边界索引 + 右边界索引”，然后“无符号右移 11 位”是推荐的写法。</strong></p>
+<pre><code>int mid = (left + right) &gt;&gt;&gt; 1 ;
+</code></pre><p>直接相加除以二有可能超过int</p>
+</li>
+<li>
+<p>数组的初始化</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">char</span> a[<span style="color:#ae81ff">10</span>];
+memset(a, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>); <span style="color:#75715e">// 将每个元素设置为1
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">这种只对</span>char型有用
+      
+<span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=</span>{<span style="color:#ae81ff">0</span>}; <span style="color:#960050;background-color:#1e0010">这样是将</span>a中的所有元素初始化为0<span style="color:#960050;background-color:#1e0010">；</span> 
+<span style="color:#960050;background-color:#1e0010">这种方式只支持默认值</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>}; <span style="color:#960050;background-color:#1e0010">这样是将</span>a[<span style="color:#ae81ff">0</span>]<span style="color:#960050;background-color:#1e0010">初始化为</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">，</span>a[<span style="color:#ae81ff">1</span>]<span style="color:#960050;background-color:#1e0010">初始化为</span><span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">，其他的初始化为</span><span style="color:#ae81ff">0</span>
+      
+<span style="color:#960050;background-color:#1e0010">如果赋值全</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">或者其他数字，老实用</span>vector吧
+vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> dp(<span style="color:#ae81ff">5</span>,vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>))  <span style="color:#75715e">//5*10的二维数组，全是1
+</span><span style="color:#75715e"></span>      
+</code></pre></div></li>
+</ol>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://kevin1996cn.github.io/" style="background-image: url(/images/home.png)"><span class="hidden">KK's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://kevin1996cn.github.io/">KK</a></h4>
+  
+  <p>Every man dies, not every man really lives.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">HLJ, China</span>
+    <span class="author-link icon-link"><a href="xiaochanchan.cn">xiaochanchan.cn</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=C%2b%2b%e5%88%b7%e9%a2%98%e7%9b%b8%e5%85%b3%e7%9f%a5%e8%af%86%e7%82%b9&nbsp;-&nbsp;I%20am%20thinking%20...&amp;url=https%3a%2f%2fkevin1996cn.github.io%2f2020%2f04%2f03%2fc-%25E5%2588%25B7%25E9%25A2%2598%25E7%259B%25B8%25E5%2585%25B3%25E7%259F%25A5%25E8%25AF%2586%25E7%2582%25B9%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkevin1996cn.github.io%2f2020%2f04%2f03%2fc-%25E5%2588%25B7%25E9%25A2%2598%25E7%259B%25B8%25E5%2585%25B3%25E7%259F%25A5%25E8%25AF%2586%25E7%2582%25B9%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fkevin1996cn.github.io%2f2020%2f04%2f03%2fc-%25E5%2588%25B7%25E9%25A2%2598%25E7%259B%25B8%25E5%2585%25B3%25E7%259F%25A5%25E8%25AF%2586%25E7%2582%25B9%2f&amp;description=C%2b%2b%e5%88%b7%e9%a2%98%e7%9b%b8%e5%85%b3%e7%9f%a5%e8%af%86%e7%82%b9"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fkevin1996cn.github.io%2f2020%2f04%2f03%2fc-%25E5%2588%25B7%25E9%25A2%2598%25E7%259B%25B8%25E5%2585%25B3%25E7%259F%25A5%25E8%25AF%2586%25E7%2582%25B9%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/kevin1996cn.github.io\/2020\/04\/03\/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9\/";  
+this.page.identifier = "https:\/\/kevin1996cn.github.io\/2020\/04\/03\/c-%E5%88%B7%E9%A2%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://KK.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://kevin1996cn.github.io/2020/04/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/">
+          <section class="post">
+              <h2>位运算、异或</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">I am thinking ...</a> All rights reserved - 2020</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://kevin1996cn.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://kevin1996cn.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://kevin1996cn.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

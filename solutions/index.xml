@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solutions on I am thinking ...</title>
+    <link>https://kevin1996cn.github.io/solutions/</link>
+    <description>Recent content in Solutions on I am thinking ...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>All rights reserved - 2020</copyright>
+    <lastBuildDate>Fri, 03 Apr 2020 17:32:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://kevin1996cn.github.io/solutions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;刷题相关知识点</title>
+      <link>https://kevin1996cn.github.io/solutions/leetcode/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/leetcode/</guid>
+      <description>2.vector vector&amp;amp; A的意思是:名字叫A的里面全是int类型的数组 for（auto item:A）就是把A中所有的都遍历一遍
+A.begin() 和 A.end()获取首尾，可以用sort（A.begin（），A.end（））来排序
+unique函数功能是去除相邻的重复元素，注意是相邻，所以必须先使用sort函数。还有一个容易忽视的特性是它并不真正把重复的元素删除。之所以说比不真正把重复的元素删除， 因为unique实际上并没有删除任何元素，而是将无重复的元素复制到序列的前段，从而覆盖相邻的重复元素。unique返回的迭代器指向超出无重复的元素范围末端的下一个位置。
+A.begin() A.end() A.front() A.back() 前两个是起始和末尾元素的值，后两个是返回的引用。
+3.递归要想好，比如求二叉树最大高度。如果树为空就返回0，否则返回左子树或右子树两者最大值+1
+4.不用中间变量的交换，A=A+B;B=A-B;A=A-B; 第二步的A已经是A+B了。
+5.map&amp;lt;char,int&amp;gt; dict; dict[&amp;lsquo;I&amp;rsquo;]=1; dict[&amp;lsquo;V&amp;rsquo;]=5;
+6.求一个数的回文数，除10取余之后，用变量接收，然后每次把这个变量乘10加上新的取余的数，就得到反转的了；
+7.关于Int32位反转之后溢出的问题
+if(res&amp;gt;INT_MAX/10||(res==INT_MAX/10&amp;amp;&amp;amp;t&amp;gt;7)) return 0; if(res&amp;lt;INT_MIN/10||(res==INT_MIN/10&amp;amp;&amp;amp;t&amp;lt;-8)) return 0; 2^31-1=2147483647,-2^31=-2147483648 第七题：
+class Solution { public: int reverse(int x) { int res=0; while(x!=0) { int t=x%10; x=x/10; if (res &amp;gt; INT_MAX / 10 || res &amp;lt; INT_MIN / 10) //这句可以抵上边两句  return 0; res=res*10+t; } return res; } }; 官方给出的溢出判断是因为MAX_VALUE : 2147483647 MIN_VALUE : -2147483648 他要判断最后一位不要大于 7 和 不要小于-8.</description>
+    </item>
+    
+    <item>
+      <title>位运算、异或</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/</guid>
+      <description>异或的性质
+ 两个数字异或的结果a^b是将 a 和 b 的二进制每一位进行运算，得出的数字。 运算的逻辑是如果同一位的数字相同则为 0，不同则为 1.  异或的规律
+ 任何数和本身异或则为0 x⊕x=0 任何数和 0 异或是本身 0⊕x=x  ∼x表示位运算 NOT
+x&amp;amp;y表示位运算 AND
+x⊕y表示位运算 XOR
+ x &amp;amp; (-x) 是保留位中最右边 1 ，且将其余的 1 设位 0 的方法。  136.只出现一次的数字
+给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:
+输入: [2,2,1] 输出: 1 示例 2:
+输入: [4,1,2,1,2] 输出: 4
+class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { sort(nums.begin(),nums.end()); for(int i=1;i&amp;lt;nums.size();i++) { nums[0]^=nums[i]; } return nums[0]; } }; //运行 //41212排序之后11224 //1 依次异或 后面 1224 //每次结果为 0 2 0 4 137.</description>
+    </item>
+    
+    <item>
+      <title>字符串</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>字符串 取长度：字符串string取长度用.size（） 对于一个字符串变量j，可以把它当成字符数组去用 string类型可以用+连接在后面。
+大小写转换：大写英文字母的ascii码比小写的小32，即大写字母+32=小写字母 小写a从97开始，大写A从65开始,想让abc映射到123，-&amp;lsquo;a&#39;即可。
+字符串截取： 前包后不包。
+string s=&amp;quot;hello&amp;quot; s.substr(1，5) //意思截取数组下标1234的字符 字符串拼接：string类型用+连接。
+字符串反转：
+string s = &amp;#34;hello&amp;#34;; reverse(s.begin(),s.end()); 字符串转int：
+stringstream可以用来把string类型的字符串转换为int，也可以反过来 。也可以转为字符数组。
+进行多次转换需要用到ss.clear();
+stringstream ss; ss&amp;lt;&amp;lt;str; int n; ss&amp;gt;&amp;gt;n; ss.clear(); char s[10]; ss &amp;lt;&amp;lt; 8888; ss &amp;gt;&amp;gt; s; Int转字符串：int 类型转为string可以用 to_string 例：
+vector&amp;lt;int&amp;gt; num; num.push_back(to_string(i)); </description>
+    </item>
+    
+    <item>
+      <title>我要成为DP小公举</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BAdp%E5%B0%8F%E5%85%AC%E4%B8%BE/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BAdp%E5%B0%8F%E5%85%AC%E4%B8%BE/</guid>
+      <description>392.判断子序列 题意：判断S是否是T的字序列，可以不挨着。
+例：s=abc ，t=axbdb 返回true
+AC:
+O(n)复杂度
+class Solution { public: bool isSubsequence(string s, string t) { long long int slen=s.size(); long long int tlen=t.size(); if(slen&amp;gt;tlen) return false; if(slen==0) return true; int j=0; for(int i=0;i&amp;lt;=tlen;i++) { if(s[j]==t[i]) j++; if(j==slen) return true; } return false; } }; dp方案只能是在t长度不大的时候可行，因此方法仅是一个可行方案。
+class Solution { public: bool isSubsequence(string s, string t) { int slen=s.size(); int tlen=t.size(); if(slen&amp;gt;tlen) return false; if(slen==0) return true; int dp[slen+1][tlen+1]; memset(dp,0,sizeof(dp)); for(int j=0;j&amp;lt;=tlen;j++) { dp[0][j]=true; } for(int i=1;i&amp;lt;=slen;i++) { for(int j=1;j&amp;lt;=tlen;j++) { if(s[i-1]==t[j-1]) dp[i][j]=dp[i-1][j-1]; else dp[i][j]=dp[i][j-1]; } } return dp[slen][tlen]; } };  买卖股票的最佳时机含手续费   题意：给你 每天股票的价格，让你多次买入卖出，买入股票卖出之后才能再次买入，求你能获得的最大利润。交易有手续费fee。</description>
+    </item>
+    
+    <item>
+      <title>我要成为二分小王子</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E4%BA%8C%E5%88%86%E5%B0%8F%E7%8E%8B%E5%AD%90/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E4%BA%8C%E5%88%86%E5%B0%8F%E7%8E%8B%E5%AD%90/</guid>
+      <description>35.搜索插入位置 题意：就是找到插入排序需要插的位置
+示例 1:
+输入: [1,3,5,6], 5 输出: 2 示例 2:
+输入: [1,3,5,6], 2 输出: 1 示例 3:
+输入: [1,3,5,6], 7 输出: 4 示例 4:
+输入: [1,3,5,6], 0 输出: 0 分析：根据题意并结合题目给出的 4 个示例，不难分析出这个问题的等价表述如下：
+1、如果目标值（严格）大于排序数组的最后一个数，返回这个排序数组的长度，否则进入第 2 点。
+2、返回排序数组从左到右，大于或者等于目标值的第 1 个数的索引。
+AC:
+class Solution { public: int searchInsert(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int right=nums.size()-1; int left=0; if(right==-1) return 0; while(left&amp;lt;=right) //注意  { int mid=(right+left)&amp;gt;&amp;gt;1; //注意  if(nums[mid]==target) return mid; else if(nums[mid]&amp;lt;target) left=mid+1; //注意  else right=mid-1; //注意  } return left; //注意  } }; 尝试理解一下while(left&amp;lt;=right) 对于【1 3 5 6】 2这个用例，当while循环不成立时，应该是left&amp;gt;right，这时候left=1，right=0，按照题意要返回left。如果题意是要返回小于等于target的最大的那个的索引，就返回right</description>
+    </item>
+    
+    <item>
+      <title>我要成为回溯小能手</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%9E%E6%BA%AF%E5%B0%8F%E8%83%BD%E6%89%8B/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%9E%E6%BA%AF%E5%B0%8F%E8%83%BD%E6%89%8B/</guid>
+      <description>22. 括号生成 给你一个数字n，让你求出所有有效的括号组合。
+分析：
+把这个问题想象成一个树，每个节点可以走左括号或者右括号。
+要注意写递归的时候，临时传参不能用引用类型，这样你就会进入每次出来还要减去之前的那个误区。
+AC：
+class Solution { public: void digui(string res,int left,int right,int sum,vector&amp;lt;string&amp;gt;&amp;amp; ans) { if(left&amp;gt;sum/2||right&amp;gt;sum/2||right&amp;gt;left) //这个过滤条件就完全足够了吗？  return; if(res.size()==sum) ans.push_back(res); digui(res+&amp;#39;(&amp;#39;,left+1,right,sum,ans); digui(res+&amp;#39;)&amp;#39;,left,right+1,sum,ans); //这边res+‘（’是暂时加上去的 ，函数的参数string res不能传引用，传引用就不是暂时加上去了。 //包括left right都是这样  } vector&amp;lt;string&amp;gt; generateParenthesis(int n) { string res=&amp;#34;(&amp;#34;; vector&amp;lt;string&amp;gt; ans; digui(res,1,0,2*n,ans); //思路，利用递归的方式，把所有可能的组合写出来，其中有些肯定不会有效的情况不生成。  return ans; } }; 39. 组合总和 给你一个数组，再给你一个target，让你从数组中取数加和=target
+思路：
+回溯即可。
+但是要注意这个不能有重复的组合。比如2、2、3和2、3、2这种不允许出现。
+只要给一个接下去走遍历的时候只能走这个i后面的，比如2、3、4、5，你先拿了2，3，再往下走只能走3和它后面的。
+AC:
+class Solution { public: void fun(vector&amp;lt;int&amp;gt; candidates,int target,int sum,vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; res,vector&amp;lt;int&amp;gt;&amp;amp; tmp,int i) { //一个n叉树的dfs  if(sum&amp;gt;target) { return; } if(sum==target) { res.</description>
+    </item>
+    
+    <item>
+      <title>我要成为图论小骑士</title>
+      <link>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%BE%E8%AE%BA%E5%B0%8F%E9%AA%91%E5%A3%AB/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/solutions/0-%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%BE%E8%AE%BA%E5%B0%8F%E9%AA%91%E5%A3%AB/</guid>
+      <description>743.网络延迟时间 题意：求一个有向图，从K点到其他点的最短路径，然后求所有最短路径里最大的那个。注意判断是否有没有访问过的点（不联通的地方）有则返回-1
+AC：(floyd解法)
+该解法需要把题中给的这种（v，u，w）转化为grapg【v】【u】=w的形式。
+floyd的思想：就是三层循环，最外层是k，用来做中转，如果i到j的长度 大于用k中转的长度，则用中转长度替换i到j的长度。
+class Solution { public: int networkDelayTime(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; times, int N, int K) { //初始化全是最大值  vector&amp;lt;vector&amp;lt;long long int&amp;gt;&amp;gt; graph(N+1,vector&amp;lt;long long int&amp;gt;(N+1,INT_MAX)); //自己到自己是0  for(int i=1;i&amp;lt;=N;i++) graph[i][i]=0; //转成正常的图了  for(auto e:times) graph[e[0]][e[1]]=e[2]; for(int k=1;k&amp;lt;=N;k++) for(int i=1;i&amp;lt;=N;i++) for(int j=1;j&amp;lt;=N;j++) graph[i][j]=min(graph[i][j],graph[i][k]+graph[k][j]); //有k做中点会不会变小  long long int res=0; for(int i=1;i&amp;lt;=N;i++) { if(graph[K][i]==INT_MAX) return -1; res=max(res,graph[K][i]); //找所有最短路径中最大的那个。  } return res; } }; AC：djistra解法（不用优先队列）
+djistra的想法是：首先一个循环，从1到N-1，每次找到到K距离最短的点，然后用这个点做 中转，看K到其他点的距离能否更新。下次循环这个点就不算了，找剩下的到K距离最短的点，然后再以这个点做中转。
+区别于floyd算法：
+class Solution { public: int networkDelayTime(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; times, int N, int K) { //初始化全是最大值  vector&amp;lt;vector&amp;lt;long long int&amp;gt;&amp;gt; graph(N+1,vector&amp;lt;long long int&amp;gt;(N+1,INT_MAX)); //自己到自己是0  for(int i=1;i&amp;lt;=N;i++) graph[i][i]=0; //转成正常的图了  for(auto e:times) graph[e[0]][e[1]]=e[2]; //下面开始不使用优先队列的djistra  vector&amp;lt;bool&amp;gt; visited(N+1,false); visited[K]=true; for(int i=1;i&amp;lt;N;i++)//遍历N-1次就能算完。 就是除了k以外一共k-1个节点，所以是k-1次  { int min_id=0,min_dis=INT_MAX; for(int j=1;j&amp;lt;=N;j++) { //这个节点没有访问过 且 这个距离更小 就把这个节点记录下来  //这里别忘了之前标记过K被访问过了不会出现graph[K][K]这种情况。  if(visited[j]==false&amp;amp;&amp;amp;graph[K][j]&amp;lt;min_dis) { min_dis=graph[K][j]; min_id=j; } } visited[min_id]=true; //标记这个节点访问过了  for(int j=1;j&amp;lt;=N;j++) //这个时候把所有的点都更新一遍  { //从K到所有节点的距离，和用刚才的最小值做中转比  if(graph[K][min_id]+graph[min_id][j]&amp;lt;graph[K][j]) { graph[K][j]=graph[K][min_id]+graph[min_id][j]; } } } long long int res=0; for(int i=1;i&amp;lt;=N;i++) { if(graph[K][i]==INT_MAX) return -1; res=max(res,graph[K][i]); //找所有最短路径中最大的那个。  } return res; } }; </description>
+    </item>
+    
+  </channel>
+</rss>
