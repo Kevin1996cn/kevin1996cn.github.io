@@ -143,7 +143,7 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/tags/go%E8%AF%AD%E8%A8%80">Go语言</a>
+            	<a href="https://kevin1996cn.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9">知识点</a>
             </li>
         
             
@@ -158,7 +158,42 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9">知识点</a>
+            	<a href="https://kevin1996cn.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97">大数运算</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E5%9B%BE%E8%AE%BA">图论</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E6%A0%91">树</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E9%93%BE%E8%A1%A8">链表</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E5%9B%9E%E6%BA%AF">回溯</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96">位运算、异或</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E4%BA%8C%E5%88%86">二分</a>
             </li>
         
             
@@ -168,7 +203,7 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a>
+            	<a href="https://kevin1996cn.github.io/tags/go%E8%AF%AD%E8%A8%80">Go语言</a>
             </li>
         
         
@@ -225,17 +260,12 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/dp/">DP</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>题意：给的是好多数对，第一个代表身高，第二个代表在它前面有多少比他高的。
-示例
-输入: [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]] 输出: [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]] 第三个【5，2】在它前面有两个比他高的
-AC：
-bool mysort(const vector&lt;int&gt;&amp;a , const vector&lt;int&gt;&amp;b){ return a[0]&gt;b[0]||a[0]==b[0]&amp;&amp;a[1]&lt;b[1]; } class Solution { public: vector&lt;vector&lt;int&gt;&gt; reconstructQueue(vector&lt;vector&lt;int&gt;&gt;&amp; people) { sort(people.begin(),people.end(),mysort); //自定义排序  //注意到compare函数写在类外，这是因为  //std::sort要求函数对象，或是静态/全局函数指针，非静态成员函数指针不能直接传递给std::sort  vector&lt;vector&lt;int&gt;&gt; ans; for(auto v:people) ans.insert(ans.begin()+v[1],v); //插入：位置，值  return ans; } }; 其中sort的排序函数可以缩写到一起
-sort(people.begin(),people.end(),[](const vector&lt;int&gt;&amp;a,const vector&lt;int&gt;&amp;b) { return a[0]&gt;b[0] || a[0]==b[0]&amp;&amp;a[1]&lt;b[1];}); 本题，就是先排序，按身高从大到小，第二个值从小到大，然后一个一个插入begin+第二个值的位置。
-很神奇，就是这么做，但是貌似不好想。 <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些动态规划的例题。</p>
+<p>Leetcode 392、714、1143、279、120、300、70、121、486</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/dp/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -254,9 +284,17 @@ sort(people.begin(),people.end(),[](const vector&lt;int&gt;&amp;a,const vector&l
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/dp/">#DP</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -264,15 +302,11 @@ sort(people.begin(),people.end(),[](const vector&lt;int&gt;&amp;a,const vector&l
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E4%BA%8C%E5%88%86/">二分</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>旋转图像  题意：给你一个二维数组，给他顺时针旋转90度。
-分析：给两重循环，外层控制进入第几层。
-​	内层控制向左向右向上向下移动的位置。
-AC:
-class Solution { public: void rotate(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { int n=matrix.size()-1; //n=维数-1  int layers; if((n+1)%2==0) layers=(n+1)/2; else layers=n/2; cout&lt;&lt;&#34;cengshu:&#34;&lt;&lt;layers&lt;&lt;endl; for(int start=0;start&lt;layers;start++) { for(int i=0;i&lt;=n-1-start*2;i++) //  { int tmp=matrix[n-start-i][start]; //cout&lt;&lt;matrix[n-start-i][start]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[n-start][n-start-i]&lt;&lt;endl;  matrix[n-start-i][start]=matrix[n-start][n-start-i]; //cout&lt;&lt;matrix[n-start][n-start-i]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[start+i][n-start]&lt;&lt;endl;  matrix[n-start][n-start-i]=matrix[start+i][n-start]; //cout&lt;&lt;matrix[start+i][n-start]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[start][start+i]&lt;&lt;endl;  matrix[start+i][n-start]=matrix[start][start+i]; //cout&lt;&lt;matrix[start][start+i]&lt;&lt;&#34;=&#34;&lt;&lt;tmp&lt;&lt;endl;  matrix[start][start+i]=tmp; } } } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些涉及二分的例题。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E4%BA%8C%E5%88%86/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -291,9 +325,17 @@ class Solution { public: void rotate(vector&lt;vector&lt;int&gt;&gt;&amp; matrix
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E4%BA%8C%E5%88%86/">#二分</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -301,13 +343,11 @@ class Solution { public: void rotate(vector&lt;vector&lt;int&gt;&gt;&amp; matrix
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/">位运算、异或</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>快速幂
-AC:
-class Solution { public: double myPow(double x, int n) { if (n == 0) { return 1; } if (n == 1) { return x; } if (n == -1) { return 1 / x; } double half = myPow(x, n / 2); double rest = myPow(x, n % 2); return rest * half * half; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些涉及位运算、异或性质和操作的知识点及例题。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -326,9 +366,17 @@ class Solution { public: double myPow(double x, int n) { if (n == 0) { return 1;
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/">#位运算、异或</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -336,16 +384,11 @@ class Solution { public: double myPow(double x, int n) { if (n == 0) { return 1;
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E5%89%91%E6%8C%87offer-64.%E6%B1%821-2-...-n/">剑指offer-64.求1&#43;2&#43;...&#43;n</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>**题意：**把字符串中所有大写字母改成小写字母。
-示例 1：
-输入: &quot;Hello&quot; 输出: &quot;hello&quot; 示例 2：
-输入: &quot;here&quot; 输出: &quot;here&quot; 示例 3：
-输入: &quot;LOVELY&quot; 输出: &quot;lovely&quot; AC：
-class Solution { public: string toLowerCase(string str) { string str1=str; for(int i=0;i&lt;str.size();i++) { if(str[i]&gt;=&#39;A&#39;&amp;&amp;str[i]&lt;=&#39;Z&#39;) { str1[i]=str[i]+32; //大写字母ASCII码小，大小写差32。 	} else {	str1[i]=str[i]; } } return str1; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些C++ STL的使用，和一些刷题需要注意的问题，例如数据范围、初始化、全排列、报错等。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E5%89%91%E6%8C%87offer-64.%E6%B1%821-2-...-n/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -364,9 +407,17 @@ class Solution { public: string toLowerCase(string str) { string str1=str; for(i
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E5%9B%9E%E6%BA%AF/">#回溯</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -374,15 +425,11 @@ class Solution { public: string toLowerCase(string str) { string str1=str; for(i
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E5%9B%9E%E6%BA%AF/">回溯</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>**题意：**J中a和A代表宝石类型，找出S中有多少宝石。
-示例 1:
-输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot; 输出: 3 示例 2:
-输入: J = &quot;z&quot;, S = &quot;ZZ&quot; 输出: 0 AC：
-class Solution { public: int numJewelsInStones(string J, string S) { int a=&#39;a&#39;,z=&#39;z&#39;,A=&#39;A&#39;,Z=&#39;Z&#39;; int daxie[26]={0}; int xiaoxie[26]={0}; int res=0; for(int i=0;i&lt;J.size();i++) { int t=J[i]; if(t&gt;=&#39;a&#39;&amp;&amp;t&lt;=&#39;z&#39;) { xiaoxie[t-&#39;a&#39;]++; } else { daxie[t-&#39;A&#39;]++; } } for(int j=0;j&lt;S.size();j++) { int t=S[j]; if(t&gt;=&#39;a&#39;&amp;&amp;t&lt;=&#39;z&#39;) { if(xiaoxie[t-&#39;a&#39;]) res++; } else { if(daxie[t-&#39;A&#39;]) res++; } } return res; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些涉及回溯的例题。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E5%9B%9E%E6%BA%AF/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -401,9 +448,17 @@ class Solution { public: int numJewelsInStones(string J, string S) { int a=&#39;
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E5%9B%9E%E6%BA%AF/">#回溯</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -411,17 +466,11 @@ class Solution { public: int numJewelsInStones(string J, string S) { int a=&#39;
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E5%9B%BE%E8%AE%BA/">图论</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>题意：给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
-水平翻转图片就是将图片的每一行都进行翻转，即逆序（镜像）。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。
-反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。
-示例 1:
-输入: [[1,1,0],[1,0,1],[0,0,0]] 输出: [[1,0,0],[0,1,0],[1,1,1]]、 解释: 首先翻转每一行: [[0,1,1],[1,0,1],[0,0,0]]； 然后反转图片: [[1,0,0],[0,1,0],[1,1,1]] 示例 2:
-输入: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]] 输出: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]] 解释: 首先翻转每一行: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]； 然后反转图片: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]] AC：
-class Solution { public: vector&lt;vector&lt;int&gt;&gt; flipAndInvertImage(vector&lt;vector&lt;int&gt;&gt;&amp; A) { int len1=A.size(); for(int i=0;i&lt;len1;i++) { int len2=A[i].size(); for(int j=0;j&lt;len2;j++) { if(A[i][j]==0) A[i][j]=1; else A[i][j]=0; } for(int j=0;j&lt;len2/2;j++) { int t=A[i][j]; A[i][j]=A[i][len2-1-j]; A[i][len2-1-j]=t; } } return A; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些涉及图论算法的习题，包含floyd、djistra等。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E5%9B%BE%E8%AE%BA/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -440,9 +489,17 @@ class Solution { public: vector&lt;vector&lt;int&gt;&gt; flipAndInvertImage(vect
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E5%9B%BE%E8%AE%BA/">#图论</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -450,16 +507,11 @@ class Solution { public: vector&lt;vector&lt;int&gt;&gt; flipAndInvertImage(vect
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>**题意：给定一个带有头结点 head 的非空单链表，返回链表的中间结点。如果有两个中间结点，则返回第二个中间结点。
-示例 1：
-输入：[1,2,3,4,5] 输出：此列表中的结点 3 (序列化形式：[3,4,5]) 返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。 注意，我们返回了一个 ListNode 类型的对象 ans，这样： ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL. 示例 2：
-输入：[1,2,3,4,5,6] 输出：此列表中的结点 4 (序列化形式：[4,5,6]) 由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。 思路：利用快慢指针的思想，快指针的每次走两个，慢指针一次走一个，快指针到头了，慢指针正好走一半。
-AC：
-/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: ListNode* middleNode(ListNode* head) { ListNode* slow=head; ListNode* fast=head; while(fast&amp;&amp;fast-&gt;next! <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p><p>一些涉及字符串相关的知识点及操作的例题。</p> <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E5%AD%97%E7%AC%A6%E4%B8%B2/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -478,9 +530,17 @@ AC：
                  
         
 
+        on
+            
+                <a href="https://kevin1996cn.github.io//tags/%E9%A2%98%E8%A7%A3/">#题解</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>,
+            
+                <a href="https://kevin1996cn.github.io//tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">#字符串</a>,
+            
         
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
+        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
+            3 Apr 2020
         </time>
     </footer>
 </article>
@@ -492,11 +552,9 @@ AC：
     </header>
     <section class="post-excerpt">
         
-            <p>**题意：给一个二叉搜索树（排序树），返回LR之间的值的和。
-示例 1：
-输入：root = [10,5,15,3,7,null,18], L = 7, R = 15 输出：32 示例 2：
-输入：root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 输出：23 AC：
-/** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution { public: int rangeSumBST(TreeNode* root, int L, int R) { if(root==NULL) return 0; if(root-&gt;val&gt;=L&amp;&amp;root-&gt;val&lt;=R) //当前节点在LR中间，就返回这个的值+递归左右。  { return root-&gt;val + rangeSumBST(root-&gt;left,L,R) + rangeSumBST(root-&gt;right,L,R); } else if(root-&gt;val&lt;L) //比L小，去右边，因为是排序树  { return rangeSumBST(root-&gt;right,L,R); } else return rangeSumBST(root-&gt;left,L,R); } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+            <p>题意：找到给定数字距离最近的所有组成数字为偶数的那个数。输出这俩数的差值。
+如2018距离最近的全是偶数的是2020，故输出2.
+启示：这种题能想到算一遍加的算一遍减的。也应该可以 <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

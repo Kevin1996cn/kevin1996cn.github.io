@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>链表 on I am thinking ...</title>
+    <link>https://kevin1996cn.github.io/tags/%E9%93%BE%E8%A1%A8/</link>
+    <description>Recent content in 链表 on I am thinking ...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>All rights reserved - 2020</copyright>
+    <lastBuildDate>Fri, 03 Apr 2020 17:32:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://kevin1996cn.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>237. 删除链表中的节点</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/237.-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/237.-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：删除单链表中指定值的节点&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>876. 链表的中间结点</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/876.-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/876.-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意：给定一个带有头结点 &lt;code&gt;head&lt;/code&gt; 的非空单链表，返回链表的中间结点。如果有两个中间结点，则返回第二个中间结点。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

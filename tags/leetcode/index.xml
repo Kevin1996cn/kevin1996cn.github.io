@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>1021. 删除最外层的括号</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/1021.-%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/1021.-%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意：把最外面一层的括号去掉。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>15.三数之和</title>
       <link>https://kevin1996cn.github.io/2020/04/03/15.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
       <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
@@ -31,12 +40,104 @@
     </item>
     
     <item>
+      <title>236. 二叉树的最近公共祖先</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/236.-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/236.-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：给一个二叉树，找到给出两个节点的最近父节点。（&lt;strong&gt;一个节点也可以是它自己的祖先&lt;/strong&gt;）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>237. 删除链表中的节点</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/237.-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/237.-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：删除单链表中指定值的节点&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>406. 根据身高重建队列</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/406.-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/406.-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：给的是好多数对，第一个代表身高，第二个代表在它前面有多少比他高的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>43. 字符串相乘</title>
       <link>https://kevin1996cn.github.io/2020/04/03/43.-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E4%B9%98/</link>
       <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
       
       <guid>https://kevin1996cn.github.io/2020/04/03/43.-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E4%B9%98/</guid>
       <description>&lt;p&gt;题意：大数相乘，给的字符串&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>48.旋转图像</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/48.%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/48.%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</guid>
+      <description>&lt;p&gt;题意：给你一个二维数组，给他顺时针旋转90度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>50. Pow(x,n)</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/50.-powxn/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/50.-powxn/</guid>
+      <description>&lt;p&gt;题意：实现快速幂的函数。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>709.转换成小写字母 </title>
+      <link>https://kevin1996cn.github.io/2020/04/03/709.%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/709.%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：给的是好多数对，第一个代表身高，第二个代表在它前面有多少比他高的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>771. 宝石与石头</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/771.-%E5%AE%9D%E7%9F%B3%E4%B8%8E%E7%9F%B3%E5%A4%B4/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/771.-%E5%AE%9D%E7%9F%B3%E4%B8%8E%E7%9F%B3%E5%A4%B4/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意：J中a和A代表宝石类型，找出S中有多少宝石。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>832. 翻转图像</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/832.-%E7%BF%BB%E8%BD%AC%E5%9B%BE%E5%83%8F/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/832.-%E7%BF%BB%E8%BD%AC%E5%9B%BE%E5%83%8F/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;：给定一个二进制矩阵 &lt;code&gt;A&lt;/code&gt;，我们想先水平翻转图像，然后反转图像并返回结果。&lt;/p&gt;
+&lt;p&gt;水平翻转图片就是将图片的每一行都进行翻转，即逆序（镜像）。例如，水平翻转 &lt;code&gt;[1, 1, 0]&lt;/code&gt; 的结果是 &lt;code&gt;[0, 1, 1]&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;反转图片的意思是图片中的 &lt;code&gt;0&lt;/code&gt; 全部被 &lt;code&gt;1&lt;/code&gt; 替换， &lt;code&gt;1&lt;/code&gt; 全部被 &lt;code&gt;0&lt;/code&gt; 替换。例如，反转 &lt;code&gt;[0, 1, 1]&lt;/code&gt; 的结果是 &lt;code&gt;[1, 0, 0]&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>876. 链表的中间结点</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/876.-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/876.-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意：给定一个带有头结点 &lt;code&gt;head&lt;/code&gt; 的非空单链表，返回链表的中间结点。如果有两个中间结点，则返回第二个中间结点。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>938. 二叉搜索树的范围和</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/938.-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/938.-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;题意：给一个二叉搜索树（排序树），返回LR之间的值的和。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
