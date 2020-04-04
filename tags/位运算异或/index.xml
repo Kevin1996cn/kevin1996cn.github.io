@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>位运算、异或 on I am thinking ...</title>
+    <link>https://kevin1996cn.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/</link>
+    <description>Recent content in 位运算、异或 on I am thinking ...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>All rights reserved - 2020</copyright>
+    <lastBuildDate>Fri, 03 Apr 2020 17:32:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://kevin1996cn.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>位运算、异或</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%BC%82%E6%88%96/</guid>
+      <description>&lt;p&gt;一些涉及位运算、异或性质和操作的知识点及例题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

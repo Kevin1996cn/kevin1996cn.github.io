@@ -138,17 +138,37 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/tags/machine-learning">Machine Learning</a>
+            	<a href="https://kevin1996cn.github.io/tags/%E9%A2%98%E8%A7%A3">题解</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/tags/others">Others</a>
+            	<a href="https://kevin1996cn.github.io/tags/go%E8%AF%AD%E8%A8%80">Go语言</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://kevin1996cn.github.io/about">About</a>
+            	<a href="https://kevin1996cn.github.io/tags/leetcode">Leetcode</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9">知识点</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/dp">DP</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://kevin1996cn.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a>
             </li>
         
         
@@ -205,22 +225,17 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%9E%E6%BA%AF%E5%B0%8F%E8%83%BD%E6%89%8B/">我要成为回溯小能手</a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>22. 括号生成 给你一个数字n，让你求出所有有效的括号组合。
-分析：
-把这个问题想象成一个树，每个节点可以走左括号或者右括号。
-要注意写递归的时候，临时传参不能用引用类型，这样你就会进入每次出来还要减去之前的那个误区。
+            <p>题意：给的是好多数对，第一个代表身高，第二个代表在它前面有多少比他高的。
+示例
+输入: [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]] 输出: [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]] 第三个【5，2】在它前面有两个比他高的
 AC：
-class Solution { public: void digui(string res,int left,int right,int sum,vector&lt;string&gt;&amp; ans) { if(left&gt;sum/2||right&gt;sum/2||right&gt;left) //这个过滤条件就完全足够了吗？  return; if(res.size()==sum) ans.push_back(res); digui(res+&#39;(&#39;,left+1,right,sum,ans); digui(res+&#39;)&#39;,left,right+1,sum,ans); //这边res+‘（’是暂时加上去的 ，函数的参数string res不能传引用，传引用就不是暂时加上去了。 //包括left right都是这样  } vector&lt;string&gt; generateParenthesis(int n) { string res=&#34;(&#34;; vector&lt;string&gt; ans; digui(res,1,0,2*n,ans); //思路，利用递归的方式，把所有可能的组合写出来，其中有些肯定不会有效的情况不生成。  return ans; } }; 39. 组合总和 给你一个数组，再给你一个target，让你从数组中取数加和=target
-思路：
-回溯即可。
-但是要注意这个不能有重复的组合。比如2、2、3和2、3、2这种不允许出现。
-只要给一个接下去走遍历的时候只能走这个i后面的，比如2、3、4、5，你先拿了2，3，再往下走只能走3和它后面的。
-AC:
-class Solution { public: void fun(vector&lt;int&gt; candidates,int target,int sum,vector&lt;vector&lt;int&gt;&gt;&amp; res,vector&lt;int&gt;&amp; tmp,int i) { //一个n叉树的dfs  if(sum&gt;target) { return; } if(sum==target) { res. <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%9E%E6%BA%AF%E5%B0%8F%E8%83%BD%E6%89%8B/">&raquo;</a></p>
+bool mysort(const vector&lt;int&gt;&amp;a , const vector&lt;int&gt;&amp;b){ return a[0]&gt;b[0]||a[0]==b[0]&amp;&amp;a[1]&lt;b[1]; } class Solution { public: vector&lt;vector&lt;int&gt;&gt; reconstructQueue(vector&lt;vector&lt;int&gt;&gt;&amp; people) { sort(people.begin(),people.end(),mysort); //自定义排序  //注意到compare函数写在类外，这是因为  //std::sort要求函数对象，或是静态/全局函数指针，非静态成员函数指针不能直接传递给std::sort  vector&lt;vector&lt;int&gt;&gt; ans; for(auto v:people) ans.insert(ans.begin()+v[1],v); //插入：位置，值  return ans; } }; 其中sort的排序函数可以缩写到一起
+sort(people.begin(),people.end(),[](const vector&lt;int&gt;&amp;a,const vector&lt;int&gt;&amp;b) { return a[0]&gt;b[0] || a[0]==b[0]&amp;&amp;a[1]&lt;b[1];}); 本题，就是先排序，按身高从大到小，第二个值从小到大，然后一个一个插入begin+第二个值的位置。
+很神奇，就是这么做，但是貌似不好想。 <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -240,8 +255,8 @@ class Solution { public: void fun(vector&lt;int&gt; candidates,int target,int su
         
 
         
-        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
-            3 Apr 2020
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
         </time>
     </footer>
 </article>
@@ -249,18 +264,15 @@ class Solution { public: void fun(vector&lt;int&gt; candidates,int target,int su
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://kevin1996cn.github.io/2020/04/03/%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%BE%E8%AE%BA%E5%B0%8F%E9%AA%91%E5%A3%AB/">我要成为图论小骑士</a></h2>
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>743.网络延迟时间 题意：求一个有向图，从K点到其他点的最短路径，然后求所有最短路径里最大的那个。注意判断是否有没有访问过的点（不联通的地方）有则返回-1
-AC：(floyd解法)
-该解法需要把题中给的这种（v，u，w）转化为grapg【v】【u】=w的形式。
-floyd的思想：就是三层循环，最外层是k，用来做中转，如果i到j的长度 大于用k中转的长度，则用中转长度替换i到j的长度。
-class Solution { public: int networkDelayTime(vector&lt;vector&lt;int&gt;&gt;&amp; times, int N, int K) { //初始化全是最大值  vector&lt;vector&lt;long long int&gt;&gt; graph(N+1,vector&lt;long long int&gt;(N+1,INT_MAX)); //自己到自己是0  for(int i=1;i&lt;=N;i++) graph[i][i]=0; //转成正常的图了  for(auto e:times) graph[e[0]][e[1]]=e[2]; for(int k=1;k&lt;=N;k++) for(int i=1;i&lt;=N;i++) for(int j=1;j&lt;=N;j++) graph[i][j]=min(graph[i][j],graph[i][k]+graph[k][j]); //有k做中点会不会变小  long long int res=0; for(int i=1;i&lt;=N;i++) { if(graph[K][i]==INT_MAX) return -1; res=max(res,graph[K][i]); //找所有最短路径中最大的那个。  } return res; } }; AC：djistra解法（不用优先队列）
-djistra的想法是：首先一个循环，从1到N-1，每次找到到K距离最短的点，然后用这个点做 中转，看K到其他点的距离能否更新。下次循环这个点就不算了，找剩下的到K距离最短的点，然后再以这个点做中转。
-区别于floyd算法：
-class Solution { public: int networkDelayTime(vector&lt;vector&lt;int&gt;&gt;&amp; times, int N, int K) { //初始化全是最大值  vector&lt;vector&lt;long long int&gt;&gt; graph(N+1,vector&lt;long long int&gt;(N+1,INT_MAX)); //自己到自己是0  for(int i=1;i&lt;=N;i++) graph[i][i]=0; //转成正常的图了  for(auto e:times) graph[e[0]][e[1]]=e[2]; //下面开始不使用优先队列的djistra  vector&lt;bool&gt; visited(N+1,false); visited[K]=true; for(int i=1;i&lt;N;i++)//遍历N-1次就能算完。 就是除了k以外一共k-1个节点，所以是k-1次  { int min_id=0,min_dis=INT_MAX; for(int j=1;j&lt;=N;j++) { //这个节点没有访问过 且 这个距离更小 就把这个节点记录下来  //这里别忘了之前标记过K被访问过了不会出现graph[K][K]这种情况。  if(visited[j]==false&amp;&amp;graph[K][j]&lt;min_dis) { min_dis=graph[K][j]; min_id=j; } } visited[min_id]=true; //标记这个节点访问过了  for(int j=1;j&lt;=N;j++) //这个时候把所有的点都更新一遍  { //从K到所有节点的距离，和用刚才的最小值做中转比  if(graph[K][min_id]+graph[min_id][j]&lt;graph[K][j]) { graph[K][j]=graph[K][min_id]+graph[min_id][j]; } } } long long int res=0; for(int i=1;i&lt;=N;i++) { if(graph[K][i]==INT_MAX) return -1; res=max(res,graph[K][i]); //找所有最短路径中最大的那个。  } return res; } };  <a class="read-more" href="https://kevin1996cn.github.io/2020/04/03/%E6%88%91%E8%A6%81%E6%88%90%E4%B8%BA%E5%9B%BE%E8%AE%BA%E5%B0%8F%E9%AA%91%E5%A3%AB/">&raquo;</a></p>
+            <p>旋转图像  题意：给你一个二维数组，给他顺时针旋转90度。
+分析：给两重循环，外层控制进入第几层。
+​	内层控制向左向右向上向下移动的位置。
+AC:
+class Solution { public: void rotate(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { int n=matrix.size()-1; //n=维数-1  int layers; if((n+1)%2==0) layers=(n+1)/2; else layers=n/2; cout&lt;&lt;&#34;cengshu:&#34;&lt;&lt;layers&lt;&lt;endl; for(int start=0;start&lt;layers;start++) { for(int i=0;i&lt;=n-1-start*2;i++) //  { int tmp=matrix[n-start-i][start]; //cout&lt;&lt;matrix[n-start-i][start]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[n-start][n-start-i]&lt;&lt;endl;  matrix[n-start-i][start]=matrix[n-start][n-start-i]; //cout&lt;&lt;matrix[n-start][n-start-i]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[start+i][n-start]&lt;&lt;endl;  matrix[n-start][n-start-i]=matrix[start+i][n-start]; //cout&lt;&lt;matrix[start+i][n-start]&lt;&lt;&#34;=&#34;&lt;&lt;matrix[start][start+i]&lt;&lt;endl;  matrix[start+i][n-start]=matrix[start][start+i]; //cout&lt;&lt;matrix[start][start+i]&lt;&lt;&#34;=&#34;&lt;&lt;tmp&lt;&lt;endl;  matrix[start][start+i]=tmp; } } } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -280,8 +292,232 @@ class Solution { public: int networkDelayTime(vector&lt;vector&lt;int&gt;&gt;&am
         
 
         
-        <time class="post-date" datetime="2020-04-03T17:32:16&#43;08:00">
-            3 Apr 2020
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>快速幂
+AC:
+class Solution { public: double myPow(double x, int n) { if (n == 0) { return 1; } if (n == 1) { return x; } if (n == -1) { return 1 / x; } double half = myPow(x, n / 2); double rest = myPow(x, n % 2); return rest * half * half; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>**题意：**把字符串中所有大写字母改成小写字母。
+示例 1：
+输入: &quot;Hello&quot; 输出: &quot;hello&quot; 示例 2：
+输入: &quot;here&quot; 输出: &quot;here&quot; 示例 3：
+输入: &quot;LOVELY&quot; 输出: &quot;lovely&quot; AC：
+class Solution { public: string toLowerCase(string str) { string str1=str; for(int i=0;i&lt;str.size();i++) { if(str[i]&gt;=&#39;A&#39;&amp;&amp;str[i]&lt;=&#39;Z&#39;) { str1[i]=str[i]+32; //大写字母ASCII码小，大小写差32。 	} else {	str1[i]=str[i]; } } return str1; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>**题意：**J中a和A代表宝石类型，找出S中有多少宝石。
+示例 1:
+输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot; 输出: 3 示例 2:
+输入: J = &quot;z&quot;, S = &quot;ZZ&quot; 输出: 0 AC：
+class Solution { public: int numJewelsInStones(string J, string S) { int a=&#39;a&#39;,z=&#39;z&#39;,A=&#39;A&#39;,Z=&#39;Z&#39;; int daxie[26]={0}; int xiaoxie[26]={0}; int res=0; for(int i=0;i&lt;J.size();i++) { int t=J[i]; if(t&gt;=&#39;a&#39;&amp;&amp;t&lt;=&#39;z&#39;) { xiaoxie[t-&#39;a&#39;]++; } else { daxie[t-&#39;A&#39;]++; } } for(int j=0;j&lt;S.size();j++) { int t=S[j]; if(t&gt;=&#39;a&#39;&amp;&amp;t&lt;=&#39;z&#39;) { if(xiaoxie[t-&#39;a&#39;]) res++; } else { if(daxie[t-&#39;A&#39;]) res++; } } return res; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>题意：给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
+水平翻转图片就是将图片的每一行都进行翻转，即逆序（镜像）。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。
+反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。
+示例 1:
+输入: [[1,1,0],[1,0,1],[0,0,0]] 输出: [[1,0,0],[0,1,0],[1,1,1]]、 解释: 首先翻转每一行: [[0,1,1],[1,0,1],[0,0,0]]； 然后反转图片: [[1,0,0],[0,1,0],[1,1,1]] 示例 2:
+输入: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]] 输出: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]] 解释: 首先翻转每一行: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]； 然后反转图片: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]] AC：
+class Solution { public: vector&lt;vector&lt;int&gt;&gt; flipAndInvertImage(vector&lt;vector&lt;int&gt;&gt;&amp; A) { int len1=A.size(); for(int i=0;i&lt;len1;i++) { int len2=A[i].size(); for(int j=0;j&lt;len2;j++) { if(A[i][j]==0) A[i][j]=1; else A[i][j]=0; } for(int j=0;j&lt;len2/2;j++) { int t=A[i][j]; A[i][j]=A[i][len2-1-j]; A[i][len2-1-j]=t; } } return A; } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>**题意：给定一个带有头结点 head 的非空单链表，返回链表的中间结点。如果有两个中间结点，则返回第二个中间结点。
+示例 1：
+输入：[1,2,3,4,5] 输出：此列表中的结点 3 (序列化形式：[3,4,5]) 返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。 注意，我们返回了一个 ListNode 类型的对象 ans，这样： ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL. 示例 2：
+输入：[1,2,3,4,5,6] 输出：此列表中的结点 4 (序列化形式：[4,5,6]) 由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。 思路：利用快慢指针的思想，快指针的每次走两个，慢指针一次走一个，快指针到头了，慢指针正好走一半。
+AC：
+/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: ListNode* middleNode(ListNode* head) { ListNode* slow=head; ListNode* fast=head; while(fast&amp;&amp;fast-&gt;next! <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://kevin1996cn.github.io/1/01/01/"></a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>**题意：给一个二叉搜索树（排序树），返回LR之间的值的和。
+示例 1：
+输入：root = [10,5,15,3,7,null,18], L = 7, R = 15 输出：32 示例 2：
+输入：root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 输出：23 AC：
+/** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution { public: int rangeSumBST(TreeNode* root, int L, int R) { if(root==NULL) return 0; if(root-&gt;val&gt;=L&amp;&amp;root-&gt;val&lt;=R) //当前节点在LR中间，就返回这个的值+递归左右。  { return root-&gt;val + rangeSumBST(root-&gt;left,L,R) + rangeSumBST(root-&gt;right,L,R); } else if(root-&gt;val&lt;L) //比L小，去右边，因为是排序树  { return rangeSumBST(root-&gt;right,L,R); } else return rangeSumBST(root-&gt;left,L,R); } };  <a class="read-more" href="https://kevin1996cn.github.io/1/01/01/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            <img class="author-thumb" src="https://kevin1996cn.github.io/images/home.png" alt="Author image" nopin="nopin" />
+            
+            
+            
+            KK
+                 
+        
+
+        
+        <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
         </time>
     </footer>
 </article>

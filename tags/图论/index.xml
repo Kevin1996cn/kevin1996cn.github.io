@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图论 on I am thinking ...</title>
+    <link>https://kevin1996cn.github.io/tags/%E5%9B%BE%E8%AE%BA/</link>
+    <description>Recent content in 图论 on I am thinking ...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>All rights reserved - 2020</copyright>
+    <lastBuildDate>Fri, 03 Apr 2020 17:32:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://kevin1996cn.github.io/tags/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>图论</title>
+      <link>https://kevin1996cn.github.io/2020/04/03/%E5%9B%BE%E8%AE%BA/</link>
+      <pubDate>Fri, 03 Apr 2020 17:32:16 +0800</pubDate>
+      
+      <guid>https://kevin1996cn.github.io/2020/04/03/%E5%9B%BE%E8%AE%BA/</guid>
+      <description>&lt;p&gt;一些涉及图论算法的习题，包含floyd、djistra等。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
